@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddItem from './components/addItem';
+import Header from './components/Header';
 
 class App extends Component {
   constructor(){
@@ -12,6 +13,9 @@ class App extends Component {
     console.log(this.state.items);
     return (
       <div className="App">
+	<Header
+		number={this.state.items.length}
+	/>
         <AddItem
           addItemFunc={(data)=>{
             const {items} = this.state;
