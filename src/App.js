@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddItem from './components/addItem';
 import Header from './components/Header';
+import Card from './components/Card';
 
 class App extends Component {
   constructor(){
@@ -15,6 +16,17 @@ class App extends Component {
       <div className="App">
 	<Header
 		number={this.state.items.length}
+	/>
+	<Card
+		items={this.state.items}
+		deleteHandler={(e)=>{
+			let {items} = this.state;
+			delete items[e.target.id];
+			items = items.filter((elem)=>{
+				return (elem !== undefined);
+			});
+			this.setState({items});
+		}}
 	/>
         <AddItem
           addItemFunc={(data)=>{
