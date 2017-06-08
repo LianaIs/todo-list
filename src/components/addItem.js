@@ -1,5 +1,10 @@
 import React from 'react';
 
+const but_styling ={
+  backgroundColor: '#4682B4', 
+  color: 'white',
+}
+
 export default
 class AddItem extends React.Component {
   constructor(){
@@ -34,7 +39,7 @@ class AddItem extends React.Component {
           value={this.state.text}
           onChange={this.changeHandler}
         />
-        <input
+        <input style = {but_styling}
           type="button"
           value="Add"
           onClick={this.clickHandler}
