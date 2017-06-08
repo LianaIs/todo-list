@@ -1,8 +1,12 @@
 import React from 'react';
 
 const but_styling ={
-  backgroundColor: '#4682B4', 
+  backgroundColor: '#4682B4',
   color: 'white',
+}
+const input_styling ={
+  fontSize : '24px',
+  fontStyle: 'italic',
 }
 
 export default
@@ -34,7 +38,8 @@ class AddItem extends React.Component {
   render(){
     return(
       <div>
-        <input
+        <input style={input_styling}
+          placeholder="New item"
           type="text"
           value={this.state.text}
           onChange={this.changeHandler}
