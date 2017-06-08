@@ -3,6 +3,14 @@ import AddItem from './components/addItem';
 import Header from './components/Header';
 import Card from './components/Card';
 
+const app_styling = {
+  textAlign: 'center',
+  display: 'flex',
+  backgroundcolor: 'aliceblue',
+  flexDirection: 'column',
+  justifyContent: 'center',
+}
+
 class App extends Component {
   constructor(){
     super();
@@ -13,7 +21,7 @@ class App extends Component {
   render() {
     console.log(this.state.items);
     return (
-      <div className="App">
+      <div className="App" style={app_styling}>
 	<Header
 		number={this.state.items.length}
 	/>
